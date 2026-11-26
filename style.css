@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  padding: 20px;
-  background-color: papayawhip;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, papayawhip 0%, #fde68a 100%);
   font-family: "Segoe UI", Tahoma, Arial, sans-serif;
   color: #1e293b;
+  min-height: 100vh;
 }
 
 header {
@@ -11,14 +12,26 @@ header {
   margin-bottom: 24px;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #1e293b;
+}
+
 .card {
   width: 320px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
   margin: 0 auto;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
 }
 
 .avatar {
@@ -26,38 +39,52 @@ header {
   height: 110px;
   object-fit: cover;
   border-radius: 50%;
+  border: 3px solid #f59e0b;
   display: block;
   margin: 0 auto 16px;
 }
 
 #profile-name {
   margin: 0 0 8px;
-  color: #333333;
+  color: #0f172a;
   text-align: center;
+  font-size: 1.35rem;
 }
 
 .bio {
-  color: #666666;
+  color: #64748b;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: center;
+  margin: 0 0 16px;
 }
 
 h3 {
-  margin-top: 20px;
-  margin-bottom: 8px;
-  font-size: 16px;
+  margin: 16px 0 10px;
+  font-size: 15px;
+  color: #334155;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 li {
-  background-color: #f8fafc;
-  padding: 8px 12px;
-  margin-bottom: 6px;
-  border-radius: 6px;
-}.
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+li:hover {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
